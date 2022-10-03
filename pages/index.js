@@ -4,6 +4,27 @@ import styles from '../styles/Home.module.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
+import styled from 'styled-components'
+
+const MainWrapper = styled.main`
+  min-height: 80vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & h1 {
+    margin: 0;
+    font-size: 64px;
+  }
+  & .container {
+    width: 720px;
+    margin: 0 auto;
+  }
+`
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -15,11 +36,15 @@ export default function Home() {
 
       <Navbar />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      <MainWrapper>
+        <h1>
           Main
         </h1>
-      </main>
+        <div className='container'>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </MainWrapper>
 
       <Footer />
     </div>
