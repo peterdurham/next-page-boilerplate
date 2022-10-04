@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Image from 'next/image'
+import styled from 'styled-components'
 
+import styles from '../styles/Home.module.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
-import styled from 'styled-components'
 
 const MainWrapper = styled.main`
-  min-height: 80vh;
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -18,6 +18,10 @@ const MainWrapper = styled.main`
   & h1 {
     margin: 0;
     font-size: 64px;
+  }
+  & .header-image {
+    text-align: center;
+    margin: 40px 0;
   }
   & .container {
     width: 720px;
@@ -40,8 +44,15 @@ export default function Home() {
         <h1>
           Main
         </h1>
+        <div className="header-image">
+          <Image
+            src="/header-image.jpeg"
+            alt="Picture of the author"
+            width={500}
+            height={312}
+          />
+        </div>
         <div className='container'>
-
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </MainWrapper>
