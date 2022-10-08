@@ -58,6 +58,7 @@ export default function Home() {
         <h1>
           Main
         </h1>
+        <h3>Landing Page Template</h3>
         <div className="header-image">
           <Image
             src="/header-image.jpeg"
